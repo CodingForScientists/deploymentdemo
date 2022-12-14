@@ -12,6 +12,9 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: 3.8
+    - name: Greet with Secret
+      run: |
+        echo $GREET
     - name: Install Dependencies
       run: |
         pip install -r requirements.txt
