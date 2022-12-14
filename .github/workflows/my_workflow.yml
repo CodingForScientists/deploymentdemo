@@ -17,4 +17,4 @@ jobs:
         echo Here is my secret greeting...;
         echo ${{ secrets.GREET }};
         GGG="${{ secrets.GREET }}";
-        DDD="Hell No" && python -c "import os; print(os.environ['GGG']);"
+        DDD="Hell No" && python -c "import os; print(os.environ['DDD']);"
