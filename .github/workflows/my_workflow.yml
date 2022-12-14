@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Greet with Secret
+      env:
+        HI: ${{ secrets.GREET }}
       run: |
         echo Here is my secret greeting...;
-        echo ${{ secrets.GREET }};
-        export GGG="${{ secrets.GREET }}";
-        export DDD="Hell No" && python -c "import os; print(os.environ['DDD']);"
+        python -c "import os; print(os.environ['HI']);"
