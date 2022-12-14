@@ -14,6 +14,7 @@ jobs:
         python-version: 3.8
     - name: Greet with Secret
       run: |
-        echo Here is my secret greeting...
-        echo ${{ secrets.GREET }}
-        python -c "print({{ secrets.GREET }})"
+        echo Here is my secret greeting...;
+        echo ${{ secrets.GREET }};
+        GGG=${{ secrets.GREET }};
+        python -c "import os; print(os.environ['GGG']);"
