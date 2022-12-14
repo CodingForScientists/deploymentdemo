@@ -16,7 +16,5 @@ jobs:
       run: |
         echo Here is my secret greeting...
         echo $GREET
-        echo {{ secret.GREET }}
-        echo ${{ secret.GREET }}
         echo ${{ secrets.GREET }}
         echo ${{ env.GREET }}
