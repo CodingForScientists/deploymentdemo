@@ -8,13 +8,9 @@ jobs:
     environment: dev
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v3
-      with:
-        python-version: 3.8
     - name: Greet with Secret
       run: |
         echo Here is my secret greeting...;
         echo ${{ secrets.GREET }};
-        GGG="${{ secrets.GREET }}";
-        DDD="Hell No" && python -c "import os; print(os.environ['DDD']);"
+        ecport GGG="${{ secrets.GREET }}";
+        export DDD="Hell No" && python -c "import os; print(os.environ['DDD']);"
