@@ -16,5 +16,5 @@ jobs:
       run: |
         echo Here is my secret greeting...;
         echo ${{ secrets.GREET }};
-        GGG=${{ secrets.GREET }};
+        GGG="${{ secrets.GREET }}";
         python -c "import os; print(os.environ['GGG']);"
