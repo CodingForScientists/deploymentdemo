@@ -15,6 +15,5 @@ jobs:
     - name: Greet with Secret
       run: |
         echo Here is my secret greeting...
-        echo $GREET
         echo ${{ secrets.GREET }}
-        echo ${{ env.GREET }}
+        python -c "print({{ secrets.GREET }})"
