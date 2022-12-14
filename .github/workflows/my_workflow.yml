@@ -14,7 +14,6 @@ jobs:
         python-version: 3.8
     - name: Greet with Secret
       run: |
+        echo Here is my secret greeting...
         echo $GREET
-    - name: Install Dependencies
-      run: |
-        pip install -r requirements.txt
+        echo {{ secret.GREET }}
