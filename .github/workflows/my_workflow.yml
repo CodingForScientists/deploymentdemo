@@ -13,4 +13,4 @@ jobs:
         HI: ${{ secrets.GREET }}
       run: |
         echo Here is my secret greeting...;
-        python -c "import os; print(os.environ['HI'], len(os.environ['HI']), str(os.environ['HI']));"
+        python -c "import os; print(os.environ['HI'], len(os.environ['HI']), os.environ['HI'].encode());"
